@@ -10,20 +10,23 @@
         .container { max-width: 1200px; margin: 0 auto; text-align: center; }
         h1 { margin-bottom: 40px; color: #2c3e50; font-size: 28px; }
         
-        /* Блок для карточек */
+        /* Сетка для трех карточек */
         .grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
         
-        /* Карточка */
-        .card { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); width: 350px; overflow: hidden; text-align: left; display: flex; flex-direction: column; }
-        .card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
-        .card-body { padding: 25px; }
-        .card-body h2 { font-size: 20px; color: #007bff; margin-bottom: 15px; }
-        .card-body ul { list-style: none; }
-        .card-body li { margin-bottom: 10px; font-size: 14px; color: #555; position: relative; padding-left: 15px; }
-        .card-body li::before { content: "•"; color: #007bff; font-weight: bold; position: absolute; left: 0; }
+        /* Карточка услуги */
+        .card { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); width: 340px; overflow: hidden; text-align: left; display: flex; flex-direction: column; }
         
-        /* Кнопка вызова */
-        .btn { display: block; text-align: center; background: #007bff; color: white; padding: 12px; margin-top: 15px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+        /* Блок для иконки вместо картинки */
+        .icon-wrapper { width: 100%; height: 140px; background-color: #e6f2ff; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #e2e8f0; }
+        .icon-wrapper svg { width: 60px; height: 60px; fill: #007bff; }
+        
+        .card-body { padding: 25px; flex-grow: 1; }
+        .card-body h2 { font-size: 20px; color: #007bff; margin-bottom: 15px; }
+        .card-body ul { list-style-type: square; margin-left: 20px; color: #475569; }
+        .card-body li { margin-bottom: 8px; font-size: 14px; line-height: 1.5; }
+        
+        /* Кнопка */
+        .btn { display: block; text-align: center; background: #007bff; color: white; padding: 12px; margin-top: 20px; border-radius: 6px; text-decoration: none; font-weight: bold; }
         .btn:hover { background: #0056b3; }
     </style>
 </head>
@@ -34,9 +37,12 @@
         
         <div class="grid">
 
-            <!-- Карточка 1 -->
+            <!-- 1. Канализация -->
             <div class="card">
-                <img src="https://unsplash.com" class="card-img" alt="Канализация">
+                <div class="icon-wrapper">
+                    <!-- Иконка Трубы/Инструменты -->
+                    <svg viewBox="0 0 24 24"><path d="M19.43 12.98c.04-.32.07-.64.07-.98s-.03-.66-.07-.98l2.11-1.65c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.3-.61-.22l-2.49 1c-.52-.4-1.08-.73-1.69-.98l-.38-2.65C14.46 2.18 14.25 2 14 2h-4c-.25 0-.46.18-.49.42l-.38 2.65c-.61.25-1.17.59-1.69.98l-2.49-1c-.23-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64l2.11 1.65c-.04.32-.07.65-.07.98s.03.66.07.98l-2.11 1.65c-.19.15-.24.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1c.52.4 1.08.73 1.69.98l.38 2.65c.03.24.24.42.49.42h4c.25 0 .46-.18.49-.42l-.38-2.65c.61-.25 1.17-.59 1.69-.98l2.49 1c.23.09.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64l-2.11-1.65zM12 15.5c-1.93 0-3.5-1.57-3.5-3.5s1.57-3.5 3.5-3.5 3.5 1.57 3.5 3.5-1.57 3.5-3.5 3.5z"/></svg>
+                </div>
                 <div class="card-body">
                     <h2>1. Канализационные работы</h2>
                     <ul>
@@ -49,10 +55,12 @@
                 </div>
             </div>
 
-            <!-- Карточка 2 -->
+            <!-- 2. Засоры -->
             <div class="card">
-                <img src="https://unsplash.com" class="card-img" alt="Засоры">
-                <div class="card-content">
+                <div class="icon-wrapper">
+                    <!-- Иконка Воды/Очистки -->
+                    <svg viewBox="0 0 24 24"><path d="M12 2c-5.33 4.55-8 8.4-8 11.5C4 17.64 7.36 21 11.5 21c3.78 0 6.92-2.82 7.42-6.5h-2.04c-.47 2.56-2.7 4.5-5.38 4.5-3.03 0-5.5-2.47-5.5-5.5 0-2.31 1.95-5.3 5.5-8.75 3.55 3.45 5.5 6.44 5.5 8.75 0 .44-.06.87-.15 1.28h2.04c.07-.42.11-.84.11-1.28 0-3.1-2.67-6.95-8-11.5z"/></svg>
+                </div>
                 <div class="card-body">
                     <h2>2. Прочистка засоров</h2>
                     <ul>
@@ -62,12 +70,14 @@
                     </ul>
                     <a href="tel:0772556682" class="btn">📞 Позвонить</a>
                 </div>
-                </div>
             </div>
 
-            <!-- Карточка 3 -->
+            <!-- 3. Отопление -->
             <div class="card">
-                <img src="https://unsplash.com" class="card-img" alt="Отопление">
+                <div class="icon-wrapper">
+                    <!-- Иконка Огня/Отопления -->
+                    <svg viewBox="0 0 24 24"><path d="M12 23c4.42 0 8-3.58 8-8V8.02c0-.55-.45-1-1-1s-1 .45-1 1V15c0 3.31-2.69 6-6 6s-6-2.69-6-6V6.15C7.26 6.84 8 8.28 8 10c0 2.21-1.79 4-4 4s-4-1.79-4-4c0-4 3.75-7.58 8.16-7.96C8.82 1.41 9.4 1 10 1h4c.83 0 1.54.5 1.84 1.22C17.43 3.12 18.5 4.93 18.5 7c0 .55-.45 1-1 1s-1-.45-1-1c0-1.53-.78-2.88-1.96-3.68-.13-.09-.2-.25-.17-.41.05-.27-.12-.53-.39-.58-.04-.01-.08-.02-.12-.02h-3.41c-.08 1.49-1.07 2.76-2.52 3.13-.3.08-.52.34-.52.65V15c0 3.31 2.69 6 6 6z"/></svg>
+                </div>
                 <div class="card-body">
                     <h2>3. Теплые полы и Отопление</h2>
                     <ul>

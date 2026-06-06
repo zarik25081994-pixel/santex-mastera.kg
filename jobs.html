@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>СантехМастер.KG — Вакансии</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #334155; line-height: 1.6; }
+        header { background: #fff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
+        .logo { font-size: 22px; font-weight: 700; color: #007bff; text-decoration: none; }
+        .logo span { color: #334155; font-size: 16px; font-weight: 400; }
+        .nav-links { display: flex; list-style: none; gap: 20px; }
+        .nav-links a { text-decoration: none; color: #64748b; font-weight: 500; font-size: 15px; }
+        .nav-links a:hover, .nav-links a.active { color: #007bff; }
+        .container { max-width: 800px; margin: 40px auto; padding: 0 20px; }
+        h1 { text-align: center; margin-bottom: 10px; color: #1e293b; }
+        .subtitle { text-align: center; color: #64748b; margin-bottom: 40px; }
+        .job-box { background: #fff; border: 1px solid #e2e8f0; border-radius: 12px; padding: 30px; margin-bottom: 25px; box-shadow: 0 4px 6px rgba(0,0,0,0.01); }
+        .job-box h2 { font-size: 22px; color: #1e293b; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .salary { font-size: 16px; color: #10b981; background: #ecfdf5; padding: 4px 12px; border-radius: 6px; font-weight: 600; }
+        .job-box h3 { font-size: 16px; color: #475569; margin: 15px 0 5px 0; }
+        .job-box p, .job-box ul { color: #64748b; font-size: 15px; }
+        .job-box ul { margin-left: 20px; }
+        .contact-cta { text-align: center; margin-top: 40px; background: #e0f2fe; padding: 25px; border-radius: 12px; border: 1px solid #bae6fd; }
+        .contact-cta h3 { margin-bottom: 10px; color: #0369a1; }
+        .contact-cta a { display: inline-block; margin-top: 15px; color: white; background: #007bff; padding: 10px 24px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+        .contact-cta a:hover { background: #0056b3; }
+        footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 20px; margin-top: 60px; }
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 15px; }
+            .job-box h2 { flex-direction: column; align-items: flex-start; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="index.html" class="logo">🛠 СантехМастер<span>.KG</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="services.html">Услуги</a></li>
+                <li><a href="jobs.html" class="active">Вакансии</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1>Работа в нашей команде</h1>
+        <p class="subtitle">Ищем надежных профессионалов для постоянного сотрудничества</p>
+
+        <div class="job-box">
+            <h2>Сварщик / Газосварщик <span class="salary">Договорная</span></h2>
+            <h3>Обязанности:</h3>
+            <p>Сварка металлических и инженерных труб, монтаж систем отопления и водоснабжения, работа со сложными узлами.</p>
+            <h3>Требования:</h3>
+            <ul>
+                <li>Опыт проделанной работы, подтвержденная квалификация;</li>
+                <li>Качественное выполнение швов, чтение базовых инженерных схем.</li>
+            </ul>
+        </div>
+
+        <div class="job-box">
+            <h2>Сантехник / Слесарь <span class="salary">Договорная</span></h2>
+            <h3>Обязанности:</h3>
+<p>Монтаж и демонтаж систем водоснабжения, установка бытовой сантехники (унитазы, ванны, бойлеры), устранение локальных и аварийных засоров.</p>
+            <h3>Требования:</h3>
+            <ul>
+                <li>Опыт работы с современными материалами (металлопластик, полипропилен);</li>
+                <li>Пунктуальность, аккуратность, умение профессионально общаться с клиентами.</li>
+            </ul>
+        </div>
+
+        <div class="contact-cta">
+            <h3>Хотите работать у нас?</h3>
+            <p>Свяжитесь с нами прямо сейчас по телефону для обсуждения условий сотрудничества!</p>
+            <a href="tel:0772556682">📞 Позвонить: 0772 55 66 82</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 СантехМастер.KG. Все права защищены.
+    </footer>
+
+</body>
+</html>

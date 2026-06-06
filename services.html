@@ -3,87 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>СантехМастер.KG — Наши Услуги</title>
+    <title>СантехМастер.KG — Услуги</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: 'Segoe UI', Roboto, sans-serif; background: #f8fafc; color: #334155; line-height: 1.6; padding-bottom: 60px; }
-        header { background: #fff; border-bottom: 1px solid #e2e8f0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 10px rgba(0,0,0,0.02); }
-        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; }
-        .logo { font-size: 22px; font-weight: 700; color: #007bff; text-decoration: none; }
-        .logo span { color: #334155; font-size: 16px; font-weight: 400; }
-        .nav-links { display: flex; list-style: none; gap: 20px; }
-        .nav-links a { text-decoration: none; color: #64748b; font-weight: 500; font-size: 15px; }
-        .nav-links a:hover, .nav-links a.active { color: #007bff; }
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        h1 { text-align: center; margin-bottom: 40px; color: #1e293b; font-size: 28px; }
+        body { font-family: 'Segoe UI', Arial, sans-serif; background-color: #f4f7f9; color: #333; padding: 40px 20px; }
+        .container { max-width: 1200px; margin: 0 auto; text-align: center; }
+        h1 { margin-bottom: 40px; color: #2c3e50; font-size: 28px; }
         
-        /* Надежное отображение карточек в один ряд */
-        .services-list { 
-            display: flex; 
-            flex-wrap: wrap; 
-            gap: 30px; 
-            justify-content: center;
-        }
+        /* Блок для карточек */
+        .grid { display: flex; flex-wrap: wrap; gap: 30px; justify-content: center; }
         
-        .card { 
-            background: #fff; 
-            border-radius: 12px; 
-            border: 1px solid #e2e8f0; 
-            overflow: hidden; 
-            box-shadow: 0 4px 6px rgba(0,0,0,0.02); 
-            width: 350px; /* Фиксированная ширина для стабильности */
-            display: flex; 
-            flex-direction: column; 
-        }
-        .card-img { width: 100%; height: 200px; object-fit: cover; background-color: #cbd5e1; }
-        .card-content { padding: 25px; }
-        .card-content h2 { font-size: 20px; color: #007bff; margin-bottom: 15px; }
-        .card-content ul { list-style-type: square; margin-left: 20px; color: #475569; }
-        .card-content li { margin-bottom: 8px; font-size: 14px; }
+        /* Карточка */
+        .card { background: #ffffff; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); width: 350px; overflow: hidden; text-align: left; display: flex; flex-direction: column; }
+        .card-img { width: 100%; height: 200px; object-fit: cover; display: block; }
+        .card-body { padding: 25px; }
+        .card-body h2 { font-size: 20px; color: #007bff; margin-bottom: 15px; }
+        .card-body ul { list-style: none; }
+        .card-body li { margin-bottom: 10px; font-size: 14px; color: #555; position: relative; padding-left: 15px; }
+        .card-body li::before { content: "•"; color: #007bff; font-weight: bold; position: absolute; left: 0; }
         
-        footer { background: #1e293b; color: #94a3b8; text-align: center; padding: 20px; margin-top: 60px; }
-        @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 15px; }
-            .card { width: 100%; }
-        }
+        /* Кнопка вызова */
+        .btn { display: block; text-align: center; background: #007bff; color: white; padding: 12px; margin-top: 15px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+        .btn:hover { background: #0056b3; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="nav-container">
-            <a href="index.html" class="logo">🛠 СантехМастер<span>.KG</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="services.html" class="active">Услуги</a></li>
-                <li><a href="jobs.html">Вакансии</a></li>
-                <li><a href="contacts.html">Контакты</a></li>
-            </ul>
-        </div>
-    </header>
-
     <div class="container">
         <h1>Категории предоставляемых услуг</h1>
         
-        <div class="services-list">
+        <div class="grid">
 
-            <!-- 1. Канализационные работы -->
+            <!-- Карточка 1 -->
             <div class="card">
-                <img src="https://unsplash.com" alt="Канализационные работы" class="card-img">
-                <div class="card-content">
+                <img src="https://unsplash.com" class="card-img" alt="Канализация">
+                <div class="card-body">
                     <h2>1. Канализационные работы</h2>
                     <ul>
                         <li>Монтаж, демонтаж и замена труб</li>
-                        <li>Установка сантехники: унитазы, раковины, ванны, душевые кабины, смесители</li>
+                        <li>Установка унитазов, раковин, ванн, кабин</li>
                         <li>Установка и подключение бойлеров</li>
-                        <li>Наружные работы: прокладка трубопроводов, копка траншей, укладка труб</li>
+                        <li>Прокладка труб, копка траншей</li>
                     </ul>
+                    <a href="tel:0772556682" class="btn">📞 Позвонить</a>
                 </div>
             </div>
 
-            <!-- 2. Прочистка засоров -->
+            <!-- Карточка 2 -->
             <div class="card">
-                <img src="https://unsplash.com" alt="Прочистка засоров" class="card-img">
+                <img src="https://unsplash.com" class="card-img" alt="Засоры">
                 <div class="card-content">
+                <div class="card-body">
                     <h2>2. Прочистка засоров</h2>
                     <ul>
+                        <li>Гидродинамическая прочистка труб</li>
+                        <li>Механическая прочистка оборудованием</li>
+                        <li>Аварийное устранение засоров</li>
+                    </ul>
+                    <a href="tel:0772556682" class="btn">📞 Позвонить</a>
+                </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="card">
+                <img src="https://unsplash.com" class="card-img" alt="Отопление">
+                <div class="card-body">
+                    <h2>3. Теплые полы и Отопление</h2>
+                    <ul>
+                        <li>Монтаж водяных теплых полов</li>
+                        <li>Разводка систем отопления зданий</li>
+                        <li>Укладка инженерных трасс</li>
+                    </ul>
+                    <a href="tel:0772556682" class="btn">📞 Позвонить</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
